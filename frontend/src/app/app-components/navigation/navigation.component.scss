@@ -1,0 +1,118 @@
+@import "../../../styles.scss";
+
+.main-container{
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    height: 4rem;
+
+    nav{
+        height: 100%;
+        height: 100%;
+        .logo-container{
+            display: none;
+        }
+    
+        ul{
+            width: 100%;
+            height: 100%;
+    
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+    
+            border-top: 1px solid $main-border-color;
+
+            .activeRouteItem{
+                span,svg{
+                    color: $nice-green;
+                    fill: $nice-green;
+                }
+            }
+
+            li{
+                list-style: none;
+                cursor: pointer;
+    
+                svg{
+                    width: 2rem;
+                    fill: #fff;
+                }
+    
+                span{
+                    display: none;
+                }
+            }
+        }  
+    }
+}
+
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em) {
+    .main-container{
+        position: relative;
+
+        nav{
+            border-bottom: 1px solid $main-border-color;
+            ul{
+                border-top: none;
+                
+                    li{
+                    svg{
+                        display: none;
+                    }
+    
+                    span{
+                        display: block !important;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em) {
+    .main-container{
+        display: flex;
+        justify-content: center;
+
+        nav{
+            width: 80%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo-container{
+                width: 10rem;
+
+                display: flex;
+                align-items: center;
+                .logo{
+                    width: 4rem;
+                    height: 4rem;
+
+                    background:url(../../../assets/logo/logo_n_green_bigger.png) no-repeat;
+                    background-size: cover;
+                    background-position:center;
+                }
+                span{
+                    letter-spacing: .5rem;
+                    color: $nice-green;
+                    font-weight: bold;
+                }
+
+            }
+
+            ul{
+                width: 40%;
+                justify-content: space-between;
+            }
+        }
+
+    }
+}

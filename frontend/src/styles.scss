@@ -1,1 +1,49 @@
 /* You can add global styles to this file, and also import other style files */
+/*Background*/
+$main-bg-color:#272727;
+$secondary-bg-color:#323443;
+/*Border*/
+$main-border-color:#4D4D4D;
+/*Highlight colors*/
+$nice-red:#D04848;
+$nice-orange:#FC6736;
+$nice-green:#3BF686;
+$nice-blue:#4CA9FF;
+$nice-light-blue:#62D9FF;
+/*Text*/
+$txt-grey:#4D4D4D;
+$txt-light-grey:#949090;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ 
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: $main-bg-color;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: $secondary-bg-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $nice-green;
+
+    /* border-bottom-left-radius: 1rem; */
+}
